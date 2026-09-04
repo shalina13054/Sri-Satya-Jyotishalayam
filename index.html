@@ -41,36 +41,75 @@
       margin: auto;
       padding: 24px 16px;
     }
-    .gallery-title {
+    .services-title {
       text-align: center;
       color: var(--deep-maroon);
-      margin: 20px 0;
+      margin: 20px 0 25px 0;
       font-size: 1.8rem;
     }
-    .deity-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
       margin-bottom: 35px;
     }
-    .deity-card {
+    .service-card {
       background: var(--card-bg);
       border: 2px solid var(--gold-accent);
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      padding: 24px 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .deity-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
     }
-    .deity-card h3 {
-      padding: 10px 0;
+    .service-icon {
+      font-size: 2.6rem;
       color: var(--deep-maroon);
-      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      color: var(--deep-maroon);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .service-badge {
+      display: inline-block;
+      background: #eef9f0;
+      color: #1b5e20;
+      border: 1px solid #c8e6c9;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .card-btn {
+      display: inline-block;
+      padding: 9px 16px;
+      background: var(--deep-maroon);
+      color: var(--gold-accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .card-btn:hover {
+      background: #990000;
+      color: #fff;
     }
     .cta-banner {
       background: #fff;
@@ -132,14 +171,15 @@
       margin-bottom: 6px;
       color: #333;
     }
-    input, textarea {
+    input, select, textarea {
       width: 100%;
       padding: 10px 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
+      font-family: inherit;
     }
-    input:focus, textarea:focus {
+    input:focus, select:focus, textarea:focus {
       outline: none;
       border-color: var(--primary-saffron);
     }
@@ -154,6 +194,9 @@
       border-radius: 6px;
       cursor: pointer;
       margin-top: 10px;
+    }
+    button.submit-btn:hover {
+      opacity: 0.95;
     }
     footer {
       background: var(--deep-maroon);
@@ -178,23 +221,51 @@
 
   <header>
     <h1>ॐ Sri Satya Jyotishalayam ॐ</h1>
-    <p>Vedic Astrology, Horoscope Analysis & Spiritual Remedial Guidance</p>
+    <p>Vedic Astrology, Remedial Rituals & Spiritual Guidance</p>
   </header>
-<div class="deity-grid">
-  <div class="deity-card">
-    <img src="https://www.google.com/imgres?q=copyright%20free%20lord%20ganesh%20images&imgurl=https%3A%2F%2Ffreepngimg.com%2Fsave%2F174812-lord-ganesha-photos-free-download-png-hd%2F1600x1575&imgrefurl=https%3A%2F%2Ffreepngimg.com%2Fpng%2F174812-lord-ganesha-photos-free-download-png-hd&docid=C106-V_v4deOnM&tbnid=Ez95l-bwDmqDMM&vet=12ahUKEwiAjtS_idWWAxVSiuEIHQxrN88QnPAOegUIxgEQAA..i&w=1600&h=1575&hcb=2&ved=2ahUKEwiAjtS_idWWAxVSiuEIHQxrN88QnPAOegUIxgEQAA" alt="Lord Ganesha" />
-    <h3>Lord Ganesha</h3>
-  </div>
-  <div class="deity-card">
-    <img src="https://www.google.com/imgres?q=copyright%20free%20lord%20shiva%20images&imgurl=https%3A%2F%2Fwww.whoa.in%2Fdownload%2Flord-shiva-hd-wallpaper-free-download10&imgrefurl=https%3A%2F%2Fwww.whoa.in%2Fgallery%2Flord-shiva-hd-wallpaper-free-download10&docid=4D24YLcx1Xg7FM&tbnid=xDtPia79gf6lsM&vet=12ahUKEwiIw4KgidWWAxVkkeEIHfbRDGYQnPAOegQIWBAA..i&w=800&h=1079&hcb=2&ved=2ahUKEwiIw4KgidWWAxVkkeEIHfbRDGYQnPAOegQIWBAA" alt="Lord Shiva" />
-    <h3>Lord Shiva</h3>
-  </div>
-  <div class="deity-card">
-    <img src="https://www.google.com/imgres?q=copyright%20free%20llaxmi%20images&imgurl=https%3A%2F%2Fst5.depositphotos.com%2F78911754%2F67773%2Fi%2F450%2Fdepositphotos_677735520-stock-photo-maa-laxmi-image-lakshmi-devi.jpg&imgrefurl=https%3A%2F%2Fdepositphotos.com%2Fphotos%2Flakshmi.html&docid=N8oFRurV5Ec9HM&tbnid=ywQJBUQOxo9BgM&vet=12ahUKEwiQxYLRidWWAxVJmuEIHfebNDgQnPAOegUI-gEQAA..i&w=428&h=600&hcb=2&ved=2ahUKEwiQxYLRidWWAxVJmuEIHfebNDgQnPAOegUI-gEQAA" alt="Maa Lakshmi" />
-    <h3>Maa Lakshmi</h3>
-  </div>
-</div>
 
+  <div class="container">
+    <h2 class="services-title">Specialized Services</h2>
+    <div class="services-grid">
+      
+      <!-- Service 1: Naga Prathishta -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon"><i class="fas fa-ring"></i></div>
+          <h3>Naga Prathishta</h3>
+          <p>Vedic rituals and Sarpa Dosha / Naga Dosha Nivarana remedies for peace, lineage prosperity, and obstacle removal.</p>
+        </div>
+        <div>
+          <a href="https://wa.me/919949032645?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Naga%20Prathishta%20service." target="_blank" class="card-btn">Inquire for Puja</a>
+        </div>
+      </div>
+
+      <!-- Service 2: Vedic & Online Pooja Services -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon"><i class="fas fa-om"></i></div>
+          <h3>Pooja Services</h3>
+          <span class="service-badge"><i class="fas fa-video"></i> Live Online Puja Available</span>
+          <p>Complete Vedic pujas, homams, and havans performed in-person or live-streamed online with sacred sankalpam in your name.</p>
+        </div>
+        <div>
+          <a href="https://wa.me/919949032645?text=Hello,%20I%20want%20to%20book%20a%20Pooja%20/%20Online%20Pooja%20session." target="_blank" class="card-btn">Book Online Pooja</a>
+        </div>
+      </div>
+
+      <!-- Service 3: Astro-Vaastu -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon"><i class="fas fa-compass"></i></div>
+          <h3>Astro-Vaastu</h3>
+          <p>Harmonizing residential and commercial spaces by combining individual planetary horoscopes with directional Vaastu remedies.</p>
+        </div>
+        <div>
+          <a href="https://wa.me/919949032645?text=Hello,%20I%20need%20an%20Astro-Vaastu%20consultation." target="_blank" class="card-btn">Get Vaastu Advice</a>
+        </div>
+      </div>
+
+    </div>
 
     <div class="cta-banner">
       <h2>Connect & Watch Latest Updates</h2>
@@ -209,8 +280,18 @@
 
     <!-- Active Formspree Form Integration -->
     <div class="form-box">
-      <h2>Book a Consultation</h2>
+      <h2>Book a Consultation / Service</h2>
       <form action="https://formspree.io/f/mnpqzznz" method="POST">
+        <div class="input-field">
+          <label for="service_type">Select Service Required</label>
+          <select id="service_type" name="service_type" required>
+            <option value="" disabled selected>Choose a service...</option>
+            <option value="Naga Prathishta">Naga Prathishta</option>
+            <option value="Pooja / Online Pooja">Pooja Services (Live Online Available)</option>
+            <option value="Astro-Vaastu">Astro-Vaastu Consultation</option>
+            <option value="General Horoscope Reading">General Horoscope Reading</option>
+          </select>
+        </div>
         <div class="input-field">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Enter your full name" />
@@ -232,8 +313,8 @@
           <input type="text" id="tob" name="birth_time_place" placeholder="e.g., 07:15 AM, Hyderabad" />
         </div>
         <div class="input-field">
-          <label for="message">Question or Query</label>
-          <textarea id="message" name="query" rows="3" placeholder="Describe your consultation requirements"></textarea>
+          <label for="message">Question or Requirements</label>
+          <textarea id="message" name="query" rows="3" placeholder="Describe your requirement, preferred puja date, or questions"></textarea>
         </div>
         <button type="submit" class="submit-btn">Submit Consultation Details</button>
       </form>
